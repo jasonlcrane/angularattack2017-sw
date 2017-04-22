@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@progress/kendo-theme-default/scss/all";
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+.question-wrapper {
+  perspective: 800px;
+  height:100vh;
+  width: 100vw;
+  background-color: #121212;
+}
+
+.question-box {
+  height:100vh;
+  width: 100vw;
+  position: relative;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+
+}
+.question-box__side {
+  position: absolute;
+  backface-visibility: hidden;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  font-size: 5vw;
+  cursor: pointer;
+  user-select: none;
+  height:100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  transition: all 4s;
+
+  &:before {
+    background-image: url('assets/images/rebel_alliance_logo.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -200;
+    position: absolute;
+  }
+}
+.question-box__front {
+  //
+}
+.question-box__back {
+  background: #212121;
+  transform: rotateY(179.9deg);
+
+  &:before {
+    transform: rotate(30deg);
+  }
+}
+
+.card-content {
+  padding: 30px;
+  margin: 0;
+  line-height: 1.2
+}
+
+.help-text {
+  color: #fff;
+  position: absolute;
+  bottom: 25px;
+  font-size: 16px;
+  margin: 0;
+}
+
+.answer-button {
+  flex: none;
+}
+.button-wrap {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+.answer-button {
+  display: inline-block;
+  margin-right: 20px;
+}
