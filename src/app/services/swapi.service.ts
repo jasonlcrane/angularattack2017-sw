@@ -138,7 +138,6 @@ export class SwapiService {
     }
 
     private getCall(url: string){
-        console.log(url);
         return this.http.get(url)
             .map(this.extractData)
             .catch(this.handleError);

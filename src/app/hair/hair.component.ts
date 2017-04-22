@@ -63,7 +63,7 @@ export class HairComponent {
     )
   }
 
-  getNewPerson() {
+  getNew() {
     this.getPerson(this.people_count);
     this.flip = 'inactive';
   }

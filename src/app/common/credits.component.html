@@ -1,0 +1,11 @@
+<h2>Many thanks to the great people who made this possible.</h2>
+<kendo-scrollview
+        [data]="items"
+        [width]="width"
+        [height]="height"
+        [arrows]="arrows">
+    <ng-template let-item="item">
+        <h2 class="scrollview-title"><a href="{{item.url}}">{{ item.title }}</a></h2>
+        <img src='{{item.img}}' alt='{{item.title}}' [ngStyle]="{minWidth: width}" draggable="false" />
+    </ng-template>
+</kendo-scrollview>

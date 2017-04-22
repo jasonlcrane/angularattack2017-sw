@@ -1,1 +1,16 @@
+<div class="header-wrapper">
+    <h1><a [routerLink]="['/']">Trivia Wars</a></h1>
+    <div class="type-selector">
+        <kendo-dropdownlist [data]="data"
+                            (selectionChange)="selectionChange($event)"
+                            [valuePrimitive]="true"
+                            [value]="selectedItem"
+                            [textField]="'text'"
+                            [valueField]="'value'">
+        </kendo-dropdownlist>
+    </div>
+</div>
+
 <router-outlet></router-outlet>
+
+<a class="credit-link" [routerLink]="['/credits']">Thanks!</a>

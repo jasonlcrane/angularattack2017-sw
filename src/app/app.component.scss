@@ -1,0 +1,59 @@
+.header-wrapper {
+  background-color: tan;
+  color: #121212;
+  padding: 10px 20px;
+
+  h1 {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900px;
+    float:left;
+    margin: 0 10px 0 0;
+    border-right: 1px solid #999;
+    padding: 0 10px 0 0;
+    
+    a {
+      color: #121212;
+      text-decoration: none;
+    }
+  }
+  
+  .type-selector {
+    display: inline;
+  }
+
+  label {
+    margin-right: 10px;
+  }
+
+}
+
+.content {
+    padding: 10px;
+    background-color: #efefef;
+    border: 1px solid rgba(0,0,0,.05);
+
+    a {
+      color: #1b95e0;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+}
+
+.credit-link {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 900;
+  font-style: italic;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

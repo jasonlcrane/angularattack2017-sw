@@ -1,0 +1,21 @@
+h2 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.scrollview-title {
+  text-align: center;
+
+  a {
+    color: #1b95e0;
+    text-decoration: none;
+
+    &:hover {
+      color: #121212;
+    }
+  }
+}

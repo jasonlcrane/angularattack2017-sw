@@ -57,7 +57,7 @@ export class FilmsComponent {
     )
   }
 
-  getNewFilm() {
+  getNew() {
     this.getFilm(this.film_count);
     this.flip = 'inactive';
   }
@@ -96,7 +96,7 @@ export class FilmsComponent {
   }
 
   transformDate(date) {
-    return this.datePipe.transform(date, 'MM/dd/yyyy');
+    return this.datePipe.transform(date, 'yMMMMd');
   }
 
 
