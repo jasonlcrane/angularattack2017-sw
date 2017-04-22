@@ -1,17 +1,1 @@
-<div class="question-wrapper">
-    <div class="question-box" (click)="toggleFlip()" [@flipState]="flip" [ngClass]="flip">
-        <div class="question-box__side question-box__front">
-            <h1 *ngIf="name" class="card-content">What color is {{ name }} hair?</h1>
-            <p class="help-text">Tap the page for the answer <span class="k-icon k-i-arrow-chevron-right"></span></p>
-        </div>
-        <div class="question-box__side question-box__back">
-            <h1 class="card-content">{{ answer }}.</h1>
-        </div>
-    </div>
-</div>
-
-<div class="button-wrap">
-    <button class="answer-button" kendoButton [primary]="true" (click)="getNewPerson()">
-        <span class="k-icon k-i-reload"></span>
-        Get a new one</button>
-</div>
+<router-outlet></router-outlet>
