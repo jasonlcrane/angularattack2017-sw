@@ -11,7 +11,7 @@ import { CustomOptions } from './common/toast.options';
 
 export class AppComponent {
   data: Array<{ text: string, value: string }> = [];
-  selectedItem: string = '';
+  selectedItem: string = 'films';
 
   public source: Array<{ text: string, value: string }> = [
     {
