@@ -1,7 +1,5 @@
 import {Component, OnInit, ViewContainerRef} from '@angular/core';
 import {Router, NavigationEnd, ActivatedRoute} from "@angular/router";
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
-import { CustomOptions } from './common/toast.options';
 
 @Component({
   selector: 'app-root',
@@ -36,10 +34,7 @@ export class AppComponent {
   private show: boolean = false;
   showCreditLink: boolean = true;
 
-  constructor(private _router: Router,
-              private toastr: ToastsManager,
-              vcr: ViewContainerRef) {
-    this.toastr.setRootViewContainerRef(vcr);
+  constructor(private _router: Router) {
 
     this.data = this.source.slice();
 
@@ -62,7 +57,6 @@ export class AppComponent {
     });
 
   }
-
 
   public selectionChange(item: any): void {
     this._router.navigate([item]);
