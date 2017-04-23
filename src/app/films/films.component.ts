@@ -82,7 +82,7 @@ export class FilmsComponent {
       },
       {
         value: 'opening_crawl',
-        question: 'What was the opening crawl of '
+        question: 'What is the start of the opening crawl in '
       }
     ];
 
@@ -91,6 +91,9 @@ export class FilmsComponent {
     this.answer = film[type.value];
     if (type.value === 'release_date') {
       this.answer = this.transformDate(this.answer);
+    }
+    if (type.value === 'opening_crawl') {
+      this.answer = this.answer.substr(0, this.answer.indexOf(".") + 1);
     }
 
   }

@@ -45,13 +45,14 @@
 
 .credit-link {
   position: absolute;
-  bottom: 20px;
-  right: 30px;
+  bottom: 0;
   font-size: 14px;
   color: #fff;
   font-weight: 900;
   font-style: italic;
   text-decoration: none;
+  text-align: center;
+  width: 100%;
 
   &:hover {
     text-decoration: underline;

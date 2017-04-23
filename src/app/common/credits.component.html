@@ -1,11 +1,12 @@
-<h2>Many thanks to the great people who made this possible.</h2>
-<kendo-scrollview
-        [data]="items"
-        [width]="width"
-        [height]="height"
-        [arrows]="arrows">
-    <ng-template let-item="item">
-        <h2 class="scrollview-title"><a href="{{item.url}}">{{ item.title }}</a></h2>
-        <img src='{{item.img}}' alt='{{item.title}}' [ngStyle]="{minWidth: width}" draggable="false" />
-    </ng-template>
-</kendo-scrollview>
+<div class="credits">
+    <h2>Many thanks to the great people who made this possible.</h2>
+    <span class="k-icon k-i-arrow-chevron-down"></span>
+    <a *ngFor="let item of items" class="credit-item" href="{{item.url}}">
+        <h3 class="credit-title">{{ item.title }}</h3>
+        <img src='{{item.img}}' alt='{{item.title}}'     draggable="false" />
+    </a>
+
+    <div class="contact-me">
+        <h2>Made it this far? Impressive. After you check out the links above, you can look me up <a class="me-on-twitter" href="https://twitter.com/jasonlcrane">on Twitter.</a></h2>
+    </div>
+</div>

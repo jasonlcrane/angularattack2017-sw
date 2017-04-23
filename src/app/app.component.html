@@ -13,4 +13,4 @@
 
 <router-outlet></router-outlet>
 
-<a class="credit-link" [routerLink]="['/credits']">Thanks!</a>
+<a *ngIf="showCreditLink" class="credit-link" [routerLink]="['/credits']">Thanks!</a>

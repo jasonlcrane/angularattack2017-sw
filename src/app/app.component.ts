@@ -34,6 +34,7 @@ export class AppComponent {
 
   private toggleText: string = "Show";
   private show: boolean = false;
+  showCreditLink: boolean = true;
 
   constructor(private _router: Router,
               private toastr: ToastsManager,
@@ -54,17 +55,14 @@ export class AppComponent {
   ngOnInit() {
     this._router.events.subscribe( (event) => {
       if (event instanceof NavigationEnd) {
-        if ( this._router.url === '/' ) {
-          this.showInfo();
+        if ( this._router.url === '/credits' ) {
+          this.showCreditLink = false;
         }
       }
     });
 
   }
 
-  showInfo() {
-    this.toastr.info('Tap the question, see the answer.');
-  }
 
   public selectionChange(item: any): void {
     this._router.navigate([item]);

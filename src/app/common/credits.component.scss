@@ -1,21 +1,64 @@
+.credits {
+  padding: 30px 0;
+}
+
 h2 {
   text-align: center;
 }
 
-img {
-  max-width: 100%;
-  min-width: 100%;
+.credit-title {
+  padding-bottom: 10px; // don't break link continuity with margin
+  margin: 0;
+  text-align: center;
 }
 
-.scrollview-title {
+.k-i-arrow-chevron-down {
+  font-size: 48px;
+  display: block;
   text-align: center;
+  width: 100%;
+}
+img {
+  max-width: 100%;
+}
 
-  a {
+.credit-title {
+  text-align: center;
+}
+
+.credit-item {
+  margin-bottom: 10px;
+  padding: 20px;
+  border-bottom: 1px solid #999999;
+  color: #191919;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
     color: #1b95e0;
-    text-decoration: none;
+  }
+}
 
-    &:hover {
-      color: #121212;
-    }
+@media (min-width: 600px) {
+  .credit-item {
+    border-bottom: 0 none;
+    float:left;
+    width: 33.3%;
+  }
+}
+
+.contact-me {
+  clear:both;
+  margin-top: 20px;
+}
+
+.me-on-twitter {
+  color: #1b95e0;
+
+
+  &:hover {
+    color: #191919;
+    text-decoration: underline;
   }
 }

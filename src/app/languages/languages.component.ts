@@ -27,6 +27,7 @@ export class LanguagesComponent {
   answer: string = '';
   current_id: Number;
   question = '';
+  excludeIds: Array<any> = [];
 
   constructor(private swapi: SwapiService) {
     this.swapi.getSpecies().subscribe(
@@ -47,8 +48,13 @@ export class LanguagesComponent {
     console.log(id);
     this.swapi.getSpecie(id).subscribe(
         species => {
-          this.one_species = species;
-          this.getQuestionAndAnswer(species, count);
+          if ( species.language === 'none' || species.language === 'n/a' ) {
+            this.excludeIds.push(id);
+            this.getOneSpecies(count);
+          }
+          else {
+            this.getQuestionAndAnswer(species, count);
+          }
         },
         error =>  {
           this.getOneSpecies(count);
@@ -82,7 +88,7 @@ export class LanguagesComponent {
   // TODO:  this needs to be better
   public getRandomId(count) {
     var id = Math.floor(Math.random() * count) + 1;
-    if ( id !== this.current_id && id !== undefined) {
+    if ( id !== this.current_id && this.excludeIds.indexOf(id) === -1 && id !== undefined) {
       this.current_id = id;
       return id;
     }
